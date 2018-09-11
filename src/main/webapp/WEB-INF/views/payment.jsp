@@ -115,12 +115,12 @@
 <div class="row">
     <div class="col-75">
         <div class="container">
-            <form action="/action_page.php">
+            <form action="/viewcustomerdetails">
 
 
                 <div class="col-50">
                     <h3>Payment</h3>
-                    <label for="fname">Accepted Cards</label>
+                    <label>Accepted Cards</label>
                     <div class="icon-container">
                         <i class="fa fa-cc-visa" style="color:navy;"></i>
                         <i class="fa fa-cc-amex" style="color:blue;"></i>
