@@ -28,7 +28,9 @@ public class Homecontroller {
         if (statuscode >= 200 && statuscode <= 299) {
             Busdetails[] gotbusdetails = responseEntity.getBody();
 
+
             modelAndView.addObject("busdetails", gotbusdetails);
+            modelAndView.setViewName("searchbusdetails");
 
 
         }

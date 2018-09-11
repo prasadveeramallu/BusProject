@@ -19,7 +19,7 @@
 <!-- Navigation Bar -->
 <div class="w3-bar w3-white w3-large">
     <a href="/buses" class="w3-bar-item w3-button w3-mobile">Buses</a>
-    <a href="/view" class="w3-bar-item w3-button w3-mobile">View</a>
+    <a href="/viewBookings" class="w3-bar-item w3-button w3-mobile">View Bookings</a>
     <a href="/contact" class="w3-bar-item w3-button w3-mobile"></a>
     <a href="/login" class="w3-bar-item w3-button w3-mobile">LogIn</a>
     <a href="/register" class="w3-bar-item w3-button w3-mobile">SignUp</a>
@@ -60,7 +60,7 @@
                     </div>
                     <div class="w3-row-padding" style="margin:8px -16px;">
                         <div class="w3-half w3-margin-bottom">
-                            <label><i class="fa fa-male"></i> Adults</label>
+                            <label><i class="fa fa-male"></i> No of Passengers</label>
                             <input class="w3-input w3-border" type="number" value="1" name="Adults" min="1" max="6">
                         </div>
                         <div class="w3-half">
