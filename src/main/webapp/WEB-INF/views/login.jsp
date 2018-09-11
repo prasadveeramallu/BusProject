@@ -80,6 +80,9 @@
         <br>
 
         <button type="submit">Login</button>
+
+        <h4>Doesnot have an account sign up here</h4>
+
         <button type="submit">Signup</button>
 
     </div>
