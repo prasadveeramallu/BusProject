@@ -6,70 +6,118 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
-<head>
-    <title>login</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!DOCTYPE html>
+<html lang="en">
+
+<meta charset="UTF-8">
+<title>RegistrationPage</title>
+
+<style>
+    body {font-family: Arial, Helvetica, sans-serif;}
+    * {box-sizing: border-box}
+
+    input[type=text], input[type=password] {
+        width: 100%;
+        padding: 15px;
+        margin: 5px 0 22px 0;
+        display: inline-block;
+        border: none;
+        background: #f1f1f1;
+    }
+
+    input[type=text]:focus, input[type=password]:focus {
+        background-color: #ddd;
+        outline: none;
+    }
+
+    hr {
+        border: 1px solid #f1f1f1;
+        margin-bottom: 25px;
+    }
+
+    button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        opacity: 0.9;
+    }
+
+    button:hover {
+        opacity:1;
+    }
+
+    .signinbtn {
+        padding: 14px 10px;
+        background-color: #f44336;
+    }
+
+    .signbtn, .signupbtn {
+        float: left;
+        width: 50%;
+    }
+
+    .container {
+        padding: 16px;
+    }
 
 
-</head>
+    .clearfix::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+
+    @media screen and (max-width: 300px) {
+        .signin, .signupbtn {
+            width: 100%;
+        }
+    }
+</style>
 <body>
 
-<form class="form-horizontal" action="/registerdetails" method="post">
-    <div class="form-group">
-        <label class="control-label col-sm-2" for="firstName">First Name:</label>
-        <div class="col-sm-10">
-            <input type="text" class="form-control" id="firstName" name="firstName" placeholder="Enter first name">
-        </div>
-    </div>
-    <div class="form-group">
-        <label class="control-label col-sm-2" for="lastName">Last Name:</label>
-        <div class="col-sm-10">
-            <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Enter last name">
-        </div>
-    </div>
+<h3>Welcome to Registration Page</h3>
 
-    <div class="form-group">
-        <label class="control-label col-sm-2">Gender:</label>
-        <div class="col-sm-10">
-                <input type="radio" class="form-check-input" name="gender" id="male" value="Male">Male
-        </div>
-        <div class="col-sm-10">
-                <input type="radio" class="form-check-input" name="gender" id="female" value="Female">Female
-        </div>
+<form action=" /registerdetails " method="post">
 
-    </div>
+    <img class="w3-image" src=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyNjkxv-zIH2G8-OKAo_ynj_MqaZ2Z1M2NY309hpVFOztvTbWM alt="The Bus" style="min-width:500px" width="700" height="300">
+    <div class="container">
 
-    <div class="form-group">
-        <label class="control-label col-sm-2" for="eMail">Email:</label>
-        <div class="col-sm-10">
-            <input type="email" class="form-control" id="eMail" name="eMail" placeholder="Enter email">
-        </div>
-    </div>
-    <div class="form-group">
-        <label class="control-label col-sm-2" for="userName">Username:</label>
-        <div class="col-sm-10">
-            <input type="text" class="form-control" id="userName" name="userName" placeholder="Choose a user name">
-        </div>
-    </div>
-    <div class="form-group">
-        <label class="control-label col-sm-2" for="password">Password:</label>
-        <div class="col-sm-10">
-            <input type="password" class="form-control" id="password" name="password" placeholder="Choose a password">
-        </div>
-    </div>
 
-    <div class="form-group">
-        <div class="col-sm-offset-2 col-sm-10">
-            <button type="submit" class="btn btn-default">Submit</button>
+        <h1>Registration page</h1>
+        <p>Please fill in this form to create an account.</p>
+        <hr>
+
+        <label for="firstname"><b>FirstName</b></label>
+        <input type="text" placeholder="Enter firstname" id ="firstname" name="firstName" required>
+
+        <label for="Lastname"><b>LastName</b></label>
+        <input type="text" placeholder="Enter lastname" id ="lastname" name="lastName" required>
+
+        <!--
+        <label for="Gender"><b>Gender</b></label><br>
+          <input type="radio"  name="gender" value="male" id ="Gender" required>Male</input><br>
+          <input type="radio"  name="gender" value="female"  required>female</input><br> -->
+
+        <label for="email"><b>Email</b></label>
+        <input type="text" placeholder="Enter Email"  id ="email" name="eMail" required>
+
+        <label for="username"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" id ="username" name="userName" olt>
+
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password"  id ="psw" name="password" required>
+
+
+
+        <div class="clearfix">
+
+            <button type="submit" class="signupbtn">Sign Up</button>
         </div>
     </div>
 </form>
 
-
 </body>
-</html>
