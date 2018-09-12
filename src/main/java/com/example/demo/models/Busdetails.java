@@ -1,24 +1,26 @@
+
+import 	java.sql.Date;
 package com.example.demo.models;
 
 public class Busdetails {
     String arrival;
     String destination;
-    String ONWARDDATE;
-    String RETURNDATE;
+    Date ONWARDDATE;
+    Date RETURNDATE;
 
-    public String getONWARDDATE() {
+    public Date getONWARDDATE() {
         return ONWARDDATE;
     }
 
-    public void setONWARDDATE(String ONWARDDATE) {
+    public void setONWARDDATE(Date ONWARDDATE) {
         this.ONWARDDATE = ONWARDDATE;
     }
 
-    public String getRETURNDATE() {
+    public Date getRETURNDATE() {
         return RETURNDATE;
     }
 
-    public void setRETURNDATE(String RETURNDATE) {
+    public void setRETURNDATE(Date RETURNDATE) {
         this.RETURNDATE = RETURNDATE;
     }
 
