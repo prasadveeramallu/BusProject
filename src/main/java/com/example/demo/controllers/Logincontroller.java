@@ -49,7 +49,7 @@ public class Logincontroller {
               if(registrations[i].getUserName().equals(login.getUsername())&&registrations[i].getPassword().equals(login.getPassword()))
               {
                   System.out.println("login sussessfull");
-                  modelAndView.setViewName("home");
+                  modelAndView.setViewName("customerdata");
 
               }
 

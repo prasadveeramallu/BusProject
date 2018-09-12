@@ -25,6 +25,7 @@ public class Homecontroller {
 
     @RequestMapping(value = "/busdetials")
     public ModelAndView Homedetails(@ModelAttribute Busdetails busdetails) {
+
         ResponseEntity<Busdetails[]> responseEntity = restTemplate.getForEntity("http://localhost:8080/busdetails", Busdetails[].class);
 
         ModelAndView modelAndView = new ModelAndView();

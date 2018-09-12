@@ -6,12 +6,10 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-    <title>${param.title}</title>
-    <link rel="stylesheet" type="text/css"
-          href="${pageContext.request.contextPath}/resources/style.css" />
+
 </head>
 <body>
-<form action="/save bookingdata" method="post">
+<form action="/login" method="post">
 Bus Details
 <table border="1">
     <tr>
@@ -24,19 +22,21 @@ Bus Details
     </tr>
     <c:forEach var="bus" items="${busdetails}">
     <tr>
-        <td>${bus.getArrival}</td>
-        <td>${bus.getDestination}</td>
-        <td align="center">${bus.rating}</td>
-        <td align="center">${bus.time}</td>
-        <td align="center">${bus.duration}</td>
-        <td align="center">${bus.serialno}</td>
+        <td><input type="hidden" name="arrival">${bus.getArrival()}</td>
+        <td><input type="hidden" name="destination">${bus.getDestination()}</td>
+        <td align="center"><input type="hidden" name="rating">${bus.getRating()}</td>
+        <td align="center"><input type="hidden" name="time">${bus.getTime()}</td>
+        <td align="center"><input type="hidden" name="duration">${bus.getDuration()}</td>
+        <td align="center"><input type="hidden" name="serialno">${bus.getSerialno()}</td>
+        <input type="hidden" name="busdetails" value=${bus}>
+        <input type="submit" class="form-control" id="userName" name="userName" value="Book now">
     </tr>
-    <input type="submit" class="form-control" id="userName" name="userName" value="Book now">
+
     </c:forEach>
 
-<h1>${param.title}</h1>
 
-<jsp:include page="/WEB-INF/pages/${param.content}.jsp"/>
+
+
 
 
 </form>
