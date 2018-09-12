@@ -10,25 +10,31 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class Homecontroller {
+
     @Autowired
     RestTemplate restTemplate;
 
-    @GetMapping("/home")
+    @RequestMapping("/home")
     public ModelAndView homepage() {
-        ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("home");
+
+        System.out.println("hai");
+        ModelAndView modelAndView = new ModelAndView("home");
+
         return modelAndView;
     }
 
-    @RequestMapping(value = "/busdetials", method = RequestMethod.POST)
+    @RequestMapping(value = "/busdetials")
     public ModelAndView Homedetails(@ModelAttribute Busdetails busdetails) {
-        ResponseEntity<Busdetails[]> responseEntity = restTemplate.getForEntity("url", Busdetails[].class);
+        ResponseEntity<Busdetails[]> responseEntity = restTemplate.getForEntity("http://localhost:8080/busdetails", Busdetails[].class);
+
         ModelAndView modelAndView = new ModelAndView();
         int statuscode = responseEntity.getStatusCodeValue();
         if (statuscode >= 200 && statuscode <= 299) {
             Busdetails[] gotbusdetails = responseEntity.getBody();
 
+            System.out.println(gotbusdetails[0].getArrival());
             modelAndView.addObject("busdetails", gotbusdetails);
+            modelAndView.setViewName("customerview");
 
 
         }
