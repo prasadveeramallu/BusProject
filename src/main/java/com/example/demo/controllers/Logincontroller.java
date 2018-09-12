@@ -7,10 +7,13 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
+@SessionAttributes("login")
 public class Logincontroller {
     @Autowired
     RestTemplate restTemplate;
@@ -19,39 +22,47 @@ public class Logincontroller {
     public ModelAndView Login()
     {
         ModelAndView modelAndView=new ModelAndView("login");
+        modelAndView.addObject(new Login());
         return modelAndView;
     }
 
     @RequestMapping(value = "/userlogin")
-    public ModelAndView logindetails(@ModelAttribute Login login, Registration registration)
+    public ModelAndView logindetails(@ModelAttribute("login") Login login,Registration registration)
     {
-        ResponseEntity<Registration[]> responseEntity = restTemplate.getForEntity("url",Registration[].class);
+        System.out.println("userlogin");
+        ResponseEntity<Registration[]> responseEntity = restTemplate.getForEntity("http://localhost:8080/getregisterdetails",Registration[].class);
+
+        ModelAndView modelAndView=new ModelAndView();
 
         int statuscode = responseEntity.getStatusCodeValue();
 
         if (statuscode >= 200 && statuscode <= 299) {
 
             Registration[] registrations=responseEntity.getBody();
+            System.out.println( registrations[1].getPassword());
+            System.out.println(login.getUsername());
+            System.out.println(login.getPassword());
 
-            if (login.getUsername().equals(registration.getUserName())&&login.getPassword().equals(registration.getPassword()))
-            {
-                System.out.println("login successfull");
 
-                System.exit(1);
-            }
-            else
-                {
-                    System.out.println("please enter  the valid credintials");
+          for (int i=0;i<registrations.length;i++)
+          {
+              if(registrations[i].getUserName().equals(login.getUsername())&&registrations[i].getPassword().equals(login.getPassword()))
+              {
+                  System.out.println("login sussessfull");
+                  modelAndView.setViewName("home");
 
-                    System.exit(1);
-            }
+              }
+
+          }
+
+
 
 
         } else {
             System.out.println("error ");
         }
 
-        ModelAndView modelAndView = new ModelAndView("home");
+
         return modelAndView;
 
     }

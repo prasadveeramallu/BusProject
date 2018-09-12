@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <head>
-
     <meta charset="UTF-8">
     <title>LogInPage</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
+
         body {font-family: Arial, Helvetica, sans-serif;}
         form {border: 4px solid #f1f1f1;}
 
@@ -16,6 +17,7 @@
             display: inline-block;
             border: 1px solid #ccc;
             box-sizing: border-box;
+
         }
 
         button {
@@ -37,18 +39,6 @@
             padding: 10px 18px;
             background-color: #f44336;
         }
-
-        body, html {
-            height: 100%;
-        }
-        .bg {
-
-            height: 100%;
-
-            background: url("https://upload.wikimedia.org/wikipedia/commons/d/da/Abhibus_Logo.jpg") no-repeat center;
-            background-size: cover;
-        }
-
 
         .container {
             padding: 16px;
@@ -76,28 +66,31 @@
 
 <h2>Login Form</h2>
 
-<form action="/userlogin" >
+<form:form action="/userlogin"  >
+
+    <img class="w3-image" src=https://www.tignes.net/uploads/media/page_block/0001/64/eead58cf6ce5b04a8aafe6423aaf2099146d5da9.jpeg alt="The Bus" style="min-width:500px" width="700" height="300">
 
 
     <div class="container">
         <label ><b>Username</b></label>
-        <input type="text" placeholder="Enter Username" name="username" required>
+        <input type="text" placeholder="Enter Username" name="Username" required>
         <br>
 
         <label ><b>Password</b></label>
-        <input type="password" placeholder="Enter Password" name="password" required>
+        <input type="password" placeholder="Enter Password" name="Password" required>
         <br>
 
         <button type="submit">Login</button>
 
+        <h4>Doesnot have an account sign up here</h4>
+
+
+
     </div>
 
-    <div class="container" style="background-color:#f1f1f1">
-        <button type="button" class="cancelbtn" name="cancel">Cancel</button>
-        <span class="psw">Forgot <a href="#" name="forgotpassword">password?</a></span>
-    </div>
-    <div class = "bg"></div>
-    </form>
+
+</form:form>
+<form  action="/register">  <button type="submit">Signup</button></form>
 
 </body>
 </html>
