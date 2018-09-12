@@ -2,7 +2,7 @@
 
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<
+
 
 <html>
 <title>W3.CSS Template</title>
@@ -22,7 +22,7 @@
     <a href="/viewBookings" class="w3-bar-item w3-button w3-mobile">View Bookings</a>
     <a href="/contact" class="w3-bar-item w3-button w3-mobile"></a>
     <a href="/login" class="w3-bar-item w3-button w3-mobile">LogIn</a>
-    <a href="/register" class="w3-bar-item w3-button w3-mobile">SignUp</a>
+    <a href="/register" class="w3-bar-item w3-button w3-mobile"></a>
 
 </div>
 <!-- Header -->
@@ -51,11 +51,11 @@
                     <div class="w3-row-padding" style="margin:0 -16px;">
                         <div class="w3-half w3-margin-bottom">
                             <label><i class="fa fa-calendar-o"></i> ONWARD DATE</label>
-                            <input class="w3-input w3-border" type="text" placeholder="DD MM YYYY" name="ONWARD DATE" required>
+                            <input class="w3-input w3-border" type="text" placeholder="DD MM YYYY" name="ONWARD DATE" >
                         </div>
                         <div class="w3-half">
                             <label><i class="fa fa-calendar-o"></i> RETURN DATE</label>
-                            <input class="w3-input w3-border" type="text" placeholder="DD MM YYYY" name="RETURN DATE" required>
+                            <input class="w3-input w3-border" type="text" placeholder="DD MM YYYY" name="RETURN DATE" >
                         </div>
                     </div>
                     <div class="w3-row-padding" style="margin:8px -16px;">

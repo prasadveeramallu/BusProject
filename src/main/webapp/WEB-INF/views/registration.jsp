@@ -81,7 +81,7 @@
 
 <h3>Welcome to Registration Page</h3>
 
-<form action="  " >
+<form action=" /registerdetails " method="post">
 
     <img class="w3-image" src=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyNjkxv-zIH2G8-OKAo_ynj_MqaZ2Z1M2NY309hpVFOztvTbWM alt="The Bus" style="min-width:500px" width="700" height="300">
     <div class="container">
@@ -92,10 +92,10 @@
         <hr>
 
         <label for="firstname"><b>FirstName</b></label>
-        <input type="text" placeholder="Enter firstname" id ="firstname" name="firstname" required>
+        <input type="text" placeholder="Enter firstname" id ="firstname" name="firstName" required>
 
         <label for="Lastname"><b>LastName</b></label>
-        <input type="text" placeholder="Enter lastname" id ="lastname" name="lastname" required>
+        <input type="text" placeholder="Enter lastname" id ="lastname" name="lastName" required>
 
         <!--
         <label for="Gender"><b>Gender</b></label><br>
@@ -103,10 +103,10 @@
           <input type="radio"  name="gender" value="female"  required>female</input><br> -->
 
         <label for="email"><b>Email</b></label>
-        <input type="text" placeholder="Enter Email"  id ="email" name="email" required>
+        <input type="text" placeholder="Enter Email"  id ="email" name="eMail" required>
 
         <label for="username"><b>Username</b></label>
-        <input type="text" placeholder="Enter Username" id ="username" name="username" olt>
+        <input type="text" placeholder="Enter Username" id ="username" name="userName" olt>
 
         <label for="psw"><b>Password</b></label>
         <input type="password" placeholder="Enter Password"  id ="psw" name="password" required>

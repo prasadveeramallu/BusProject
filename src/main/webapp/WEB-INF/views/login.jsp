@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <head>
     <meta charset="UTF-8">
     <title>LogInPage</title>
@@ -65,30 +66,31 @@
 
 <h2>Login Form</h2>
 
-<form action="/welcome11" >
+<form:form action="/userlogin"  >
 
     <img class="w3-image" src=https://www.tignes.net/uploads/media/page_block/0001/64/eead58cf6ce5b04a8aafe6423aaf2099146d5da9.jpeg alt="The Bus" style="min-width:500px" width="700" height="300">
 
 
     <div class="container">
         <label ><b>Username</b></label>
-        <input type="text" placeholder="Enter Username" name="uname" required>
+        <input type="text" placeholder="Enter Username" name="Username" required>
         <br>
 
         <label ><b>Password</b></label>
-        <input type="password" placeholder="Enter Password" name="psw" required>
+        <input type="password" placeholder="Enter Password" name="Password" required>
         <br>
 
         <button type="submit">Login</button>
 
         <h4>Doesnot have an account sign up here</h4>
 
-        <button type="submit">Signup</button>
+
 
     </div>
 
 
-</form>
+</form:form>
+<form  action="/register">  <button type="submit">Signup</button></form>
 
 </body>
 </html>
