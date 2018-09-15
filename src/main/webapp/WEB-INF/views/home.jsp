@@ -122,7 +122,9 @@
 </div>
 <!-- Header -->
 <header class="w3-display-container w3-content" style="max-width:1500px;">
+
     <img class="w3-image" src=https://www.dealsshutter.com/blog/wp-content/uploads/2017/11/Abhibus-Coupons.jpg alt="The Bus" style="min-width:1000px" width="1500" height="800">
+
     <div class="w3-display-left w3-padding w3-col l6 m8">
         <div class="w3-container w3-red">
             <h2>Bus Reservation</h2>
@@ -165,6 +167,17 @@
                     <div class="w3-row-padding" style="margin:0 -16px;">
                         <div class="w3-half w3-margin-bottom">
                             <label><i class="fa fa-calendar-o"></i> ONWARD DATE</label>
+<!-- <<<<<<< Shiva2
+
+                          
+
+                            <input class="w3-input w3-border" type="text" placeholder="DD MM YYYY" name="ONWARD DATE" >
+                        </div>
+                        <div class="w3-half">
+                            <label><i class="fa fa-calendar-o"></i> RETURN DATE</label>
+                            <input class="w3-input w3-border" type="text" placeholder="DD MM YYYY" name="RETURN DATE" > -->
+
+
                             <input class="w3-input w3-border" type="datetime-local" placeholder="DD MM YYYY" name="ONWARD DATE" required>
                         </div>
                         <div class="w3-half">
