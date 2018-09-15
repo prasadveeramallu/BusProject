@@ -40,23 +40,23 @@
                     <div class="w3-half w3-margin-bottom"/>
                 </div>
 
-
-                <label><i class=" "></i> FROM</label>
+               <div >
+                <label><i class=" "></i> </label>
                 <input class="w3-input w3-border" type="text" placeholder="FROM" name="From" required>
-
-                <div class="w3-half">
-                    <label><i class=" "></i> TO </label>
+               </div><br>
+                <div class=" ">
+                    <label><i class=" "></i>  </label>
                     <input class="w3-input w3-border" type="text" placeholder="TO" name="To" required>
-                </div>
+                </div><br>
 
                 <div class="w3-row-padding" style="margin:0 -16px;">
                     <div class="w3-half w3-margin-bottom">
                         <label><i class="fa fa-calendar-o"></i> ONWARD DATE</label>
-                        <input class="w3-input w3-border" type="datetime-local" placeholder="MM DD YYYY" name="ONWARD DATE" >
-                    </div>
+                        <input class="w3-input w3-border" type="text" placeholder="MM DD YYYY" name="ONWARD DATE" >
+                    </div><br>
                     <div class="w3-half">
                         <label><i class="fa fa-calendar-o"></i> RETURN DATE</label>
-                        <input class="w3-input w3-border" type="datetime-local" placeholder="MM DD YYYY" name="RETURN DATE" >
+                        <input class="w3-input w3-border" type="text" placeholder="MM DD YYYY" name="RETURN DATE" >
                     </div>
                 </div>
                 <div class="w3-row-padding" style="margin:8px -16px;">
@@ -65,8 +65,8 @@
                         <input class="w3-input w3-border" type="number" value="1" name="Adults" min="1" max="6">
                     </div>
                     <div class="w3-half">
-                        <label><i class="fa fa-child"></i> Kids</label>
-                        <input class="w3-input w3-border" type="number" value="0" name="Kids" min="0" max="6">
+                        <label><i class="fa fa-child"></i></label>
+                        <input class="w3-input w3-border" type="hidden" value="0" name="Kids" min="0" max="6">
                     </div>
                 </div>
                 <button class="w3-button w3-dark-grey" type="submit"><i class="fa fa-search w3-margin-right"></i> Search availability</button>

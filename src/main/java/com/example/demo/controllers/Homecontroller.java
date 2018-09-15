@@ -74,7 +74,7 @@ public class Homecontroller {
 
         }
         else {
-            System.out.println("error");
+           modelAndView.setViewName("display");
         }
         return modelAndView;
     }

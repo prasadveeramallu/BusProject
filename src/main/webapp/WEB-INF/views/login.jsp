@@ -594,10 +594,10 @@
 <body>
 
 <div class="sub-main-w3">
-    <form action="/home" id="demo" novalidate action="#" method="post">
+    <form action="/userlogin" id="demo" novalidate action="#" method="post">
         <h2>Login Your Account</h2>
         <div class="form-group">
-            <input type="email" class="form-control textbox" name="email" placeholder="User Name" required="">
+            <input type="email" class="form-control textbox" name="Username" placeholder="User Name" required="">
         </div>
         <div class="form-group">
             <input type="password" class="form-control textbox" name="password" placeholder="Password" required="">
