@@ -4,8 +4,9 @@ public class Payment {
     String cardholdername;
     int cardnumber;
     String month;
-    int date;
-    int cvv;
+    String date;
+    String cvv;
+
     public String getCardholdername() {
         return cardholdername;
     }
@@ -30,19 +31,19 @@ public class Payment {
         this.month = month;
     }
 
-    public int getDate() {
+    public String getDate() {
         return date;
     }
 
-    public void setDate(int date) {
+    public void setDate(String date) {
         this.date = date;
     }
 
-    public void setCvv(int cvv) {
-        this.cvv = cvv;
+    public String getCvv() {
+        return cvv;
     }
 
-    public int getCvv() {
-        return cvv;
+    public void setCvv(String cvv) {
+        this.cvv = cvv;
     }
 }

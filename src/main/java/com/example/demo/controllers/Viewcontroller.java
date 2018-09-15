@@ -45,6 +45,19 @@ public class Viewcontroller {
 
 
     }
+    @RequestMapping(value = "/viewcustomerbookings")
+    public ModelAndView ViewcustomerBookings()
+    {
+        System.out.println("starting");
+        ResponseEntity<Busdetails> responseEntity=restTemplate.getForEntity("http://localhost:8080/viewcustomerdata/hyderabad",Busdetails.class);
+        System.out.println("hello");
+        Busdetails customerbooking=responseEntity.getBody();
+        System.out.println(customerbooking.getArrival());
+        ModelAndView modelAndView=new ModelAndView();
+        modelAndView.addObject("bookingdata",customerbooking);
+        modelAndView.setViewName("bookedticket");
+        return modelAndView;
+    }
 
 
 }

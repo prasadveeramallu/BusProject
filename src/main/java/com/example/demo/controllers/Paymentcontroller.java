@@ -1,5 +1,6 @@
 package com.example.demo.controllers;
 
+import com.example.demo.models.Busdetails;
 import com.example.demo.models.Payment;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -17,22 +18,32 @@ public class Paymentcontroller {
     RestTemplate restTemplate;
 
     @RequestMapping(value = "/payment")
-    public ModelAndView payment()
+    public ModelAndView payment(@ModelAttribute Busdetails customerdata)
     {
-       ModelAndView modelAndView=new ModelAndView("payment");
+
+        ResponseEntity<Busdetails> responseEntity= restTemplate.postForEntity("http://localhost:8080/savecustomerdata",customerdata,Busdetails.class);
+        Busdetails customerbookingdata=  responseEntity.getBody();
+
+        ModelAndView modelAndView=new ModelAndView("payment");
+
        return modelAndView;
     }
 
     @RequestMapping(value = "/storepaymentdata",method = RequestMethod.POST)
-    public ModelAndView paymentdetails(@ModelAttribute Payment payment){
+    public ModelAndView paymentdetails(@ModelAttribute Payment payment,@ModelAttribute Busdetails customerdata){
+        System.out.println(customerdata.getArrival());
 
+
+
+
+        System.out.println(payment.getCardholdername());
             ModelAndView modelAndView=new ModelAndView();
-       ResponseEntity<Payment[]> paymentResponseEntity= restTemplate.postForEntity("url",payment,Payment[].class);
+       ResponseEntity<Payment> paymentResponseEntity= restTemplate.postForEntity("http://localhost:8080/paymentdata",payment,Payment.class);
         int statuscode = paymentResponseEntity.getStatusCodeValue();
 
         if (statuscode >= 200 && statuscode <= 299) {
             System.out.println("payment success");
-            modelAndView.setViewName("view");
+            modelAndView.setViewName("views");
         }
         return modelAndView;
 

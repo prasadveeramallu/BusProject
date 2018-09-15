@@ -1,9 +1,12 @@
 package com.example.demo.controllers;
 
+import com.example.demo.Validation;
 import com.example.demo.models.Registration;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.servlet.ModelAndView;
@@ -21,7 +24,7 @@ public ModelAndView registration()
 }
 
 @RequestMapping(value = "/registerdetails", method = RequestMethod.POST)
-public ModelAndView registrationDetails(@ModelAttribute Registration registration)
+public ModelAndView registrationDetails( @Validated @ModelAttribute Registration registration)
 {
     ModelAndView modelAndView=new ModelAndView();
     System.out.println("register");
@@ -40,5 +43,10 @@ public ModelAndView registrationDetails(@ModelAttribute Registration registratio
         return modelAndView;
 
    }
+}
+@InitBinder
+public void InitBinder(WebDataBinder binder)
+{
+    binder.addValidators(new Validation());
 }
 }

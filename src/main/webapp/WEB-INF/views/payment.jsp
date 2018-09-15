@@ -115,7 +115,7 @@
 <div class="row">
     <div class="col-75">
         <div class="container">
-            <form action="/viewcustomerdetails">
+            <form action="/storepaymentdata" method="post">
 
 
                 <div class="col-50">
@@ -128,15 +128,15 @@
                         <i class="fa fa-cc-discover" style="color:orange;"></i>
                     </div>
                     <label for="cname">Name on Card</label>
-                    <input type="text" id="cname" name="cardname" placeholder="John More Doe">
+                    <input type="text" id="cname" name="cardholdername" placeholder="Durga Prasad">
                     <label for="ccnum">Credit card number</label>
                     <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
                     <label for="expmonth">Exp Month</label>
-                    <input type="text" id="expmonth" name="expmonth" placeholder="September">
+                    <input type="text" id="expmonth" name="month" placeholder="September">
                     <div class="row">
                         <div class="col-50">
-                            <label for="expyear">Exp Year</label>
-                            <input type="text" id="expyear" name="expyear" placeholder="2018">
+                            <label for="expyear">Exp date</label>
+                            <input type="text" id="expyear" name="date" placeholder="2018">
                         </div>
                         <div class="col-50">
                             <label for="cvv">CVV</label>
