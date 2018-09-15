@@ -2,8 +2,8 @@ package com.example.demo.models;
 
 public class Registration {
 
-    String firstName, lastName, gender;
-    String eMail, userName, password;
+    public String firstName, lastName, gender;
+    public String eMail, userName, password;
 
     public Registration() {
     }
