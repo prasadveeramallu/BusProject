@@ -70,7 +70,7 @@
 <!-- Contact Section -->
 <div class="w3-container w3-padding-64" id="contact">
     <h1>Contact</h1><br>
-    <p>We offer full-service catering for any event, large or small. We understand your needs and we will cater the food to satisfy the biggerst criteria of them all, both look and taste. Do not hesitate to contact us.</p>
+    <p>We offer full-service bus travel. We understand your needs and we will provide the bus service to satisfy the biggerst criteria of them all, both comfort and price. Do not hesitate to contact us.</p>
     <p class="w3-text-blue-grey w3-large"><b>Floor 1, GNR's RV INSIGNIA, Silicon Valley Layout, Image Garden Road, Madhapur, Hyderabad, Telangana 500081, India</b></p>
     <p>You can also contact us by phone +91 40 6165 6789 or email abhibus@busservice.com</p>
 
